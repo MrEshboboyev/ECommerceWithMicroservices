@@ -14,7 +14,7 @@ namespace eCommerce.SharedLibrary.Middleware
             // Extract specific header form Request
             var signedHeader = context.Request.Headers["Api-Gateway"];
 
-            // NULL means, the request is not coming from the Api Gateway // 503 service unaavailable
+            // NULL means, the request is not coming from the Api Gateway // 503 service unavailable
             if (signedHeader.FirstOrDefault() is null)
             {
                 context.Response.StatusCode = StatusCodes.Status503ServiceUnavailable;
